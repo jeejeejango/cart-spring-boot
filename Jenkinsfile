@@ -23,7 +23,7 @@ pipeline {
         script {
           openshift.withCluster() {
             openshift.withProject(env.DEV_PROJECT) {
-              openshift.startBuild("cart", "--from-file=cat.jar").logs("-f")
+              openshift.startBuild("cart", "--from-file=cart.jar").logs("-f")
             }
           }
         }
